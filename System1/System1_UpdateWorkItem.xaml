@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>262,520</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>262,609</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_UpdateWorkItem_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -59,78 +59,100 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="System1_UpdateWorkItem" sap:VirtualizedContainerService.HintSize="222,440" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1_UpdateWorkItem" sap:VirtualizedContainerService.HintSize="436,750" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'TEXTAREA  newComment'" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="TypeInto_6" SendWindowMessages="False" SimulateType="False" Text="[in_Comments]">
-      <ui:TypeInto.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2ee89f0f6eef97562d26335086f308df" Selector="&lt;html app='chrome.exe' htmlwindowname='WI-Update' title='ACME System 1 - Work Items' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;" WaitForReady="INTERACTIVE" />
-      </ui:TypeInto.Target>
-    </ui:TypeInto>
-    <Sequence DisplayName="Select Sequence" sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="Sequence_24">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach Browser 'firefox.exe ACME'" sap:VirtualizedContainerService.HintSize="414,626" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="054622a65a2abb7b8e95f65c850d4cc2" Selector="&lt;html omit:app='firefox.exe' title='ACME System 1 - *' /&gt;">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="222,440" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'TEXTAREA  newComment'" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="[in_Comments]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2ee89f0f6eef97562d26335086f308df" Selector="&lt;html htmlwindowname='WI-Update' title='ACME System 1 - Work Items' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <Sequence DisplayName="Select Sequence" sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="78c19f4476b2943fec2d688a1be22216" Selector="&lt;html htmlwindowname='WI-Update' title='ACME System 1 - Work Items' /&gt;&lt;webctrl idx='1' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,114" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="down" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                </ui:SendHotkey.Target>
+              </ui:SendHotkey>
+              <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,114" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="down" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                </ui:SendHotkey.Target>
+              </ui:SendHotkey>
+              <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,114" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="down" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                </ui:SendHotkey.Target>
+              </ui:SendHotkey>
+              <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,114" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                </ui:SendHotkey.Target>
+              </ui:SendHotkey>
+            </Sequence>
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  buttonUpdate'" sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e1683236d241c957a959fb83e9380440" Selector="&lt;html htmlwindowname='WI-Update' title='ACME System 1 - Work Items' /&gt;&lt;webctrl id='buttonUpdate' tag='BUTTON' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SendHotkey DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="1000" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+          </Sequence>
+        </ActivityAction>
+      </ui:BrowserScope.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-        <ui:Click.CursorPosition>
-          <ui:CursorPosition Position="Center">
-            <ui:CursorPosition.OffsetX>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:CursorPosition.OffsetX>
-            <ui:CursorPosition.OffsetY>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:CursorPosition.OffsetY>
-          </ui:CursorPosition>
-        </ui:Click.CursorPosition>
-        <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="78c19f4476b2943fec2d688a1be22216" Selector="&lt;html app='chrome.exe' htmlwindowname='WI-Update' title='ACME System 1 - Work Items' /&gt;&lt;webctrl idx='1' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
-        </ui:Click.Target>
-      </ui:Click>
-      <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="SendHotkey_9" Key="down" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
-        <ui:SendHotkey.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-        </ui:SendHotkey.Target>
-      </ui:SendHotkey>
-      <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="SendHotkey_10" Key="down" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
-        <ui:SendHotkey.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-        </ui:SendHotkey.Target>
-      </ui:SendHotkey>
-      <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="SendHotkey_11" Key="down" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
-        <ui:SendHotkey.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-        </ui:SendHotkey.Target>
-      </ui:SendHotkey>
-      <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,114" sap2010:WorkflowViewState.IdRef="SendHotkey_12" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
-        <ui:SendHotkey.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-        </ui:SendHotkey.Target>
-      </ui:SendHotkey>
-    </Sequence>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  buttonUpdate'" sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-      <ui:Click.CursorPosition>
-        <ui:CursorPosition Position="Center">
-          <ui:CursorPosition.OffsetX>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:CursorPosition.OffsetX>
-          <ui:CursorPosition.OffsetY>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:CursorPosition.OffsetY>
-        </ui:CursorPosition>
-      </ui:Click.CursorPosition>
-      <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e1683236d241c957a959fb83e9380440" Selector="&lt;html app='chrome.exe' htmlwindowname='WI-Update' title='ACME System 1 - Work Items' /&gt;&lt;webctrl id='buttonUpdate' tag='BUTTON' /&gt;" WaitForReady="INTERACTIVE" />
-      </ui:Click.Target>
-    </ui:Click>
-    <ui:SendHotkey DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="1000" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="SendHotkey_8" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
-      <ui:SendHotkey.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-      </ui:SendHotkey.Target>
-    </ui:SendHotkey>
+    </ui:BrowserScope>
   </Sequence>
 </Activity>

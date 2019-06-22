@@ -190,7 +190,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="A transaction either succeeds or fails with a Business Rule Exception or a System Error. For System Error, it can be retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="462,1863" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="A transaction either succeeds or fails with a Business Rule Exception or a System Error. For System Error, it can be retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="211,134" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
                 <TryCatch DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="436,1432" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                   <sap:WorkflowViewStateService.ViewState>
@@ -351,7 +351,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[SystemError IsNot Nothing]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read Config, Init Applications" DisplayName="Init" sap:VirtualizedContainerService.HintSize="234,86" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read Config, Init Applications" DisplayName="Init" sap:VirtualizedContainerService.HintSize="816,2699" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
                         <TryCatch DisplayName="Catch intialization exceptions" sap:VirtualizedContainerService.HintSize="790,2302" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
@@ -436,11 +436,12 @@
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_System1Credential">[Config("System1_Credential").ToString]</InArgument>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_System1URL">[Config("System1_URL").ToString]</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="browserApp">[BROWSERAPP]</InArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
                                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke System1_NavigateWorkItem workflow" sap:VirtualizedContainerService.HintSize="603,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="System1\System1_NavigateWorkItem.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
-                                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                        <InArgument x:TypeArguments="ui:Browser" x:Key="in_BrowserType" />
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
                                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke System1_ExtractWorkItemData workflow" sap:VirtualizedContainerService.HintSize="603,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="System1\System1_ExtractWorkItemData.xaml">
@@ -678,6 +679,7 @@
       <Variable x:TypeArguments="sd:DataTable" Name="TransactionData" />
       <Variable x:TypeArguments="sd:DataRow[]" Name="WIList" />
       <Variable x:TypeArguments="x:String" Name="in_WIID" />
+      <Variable x:TypeArguments="x:String" Default="firefox.exe" Name="BROWSERAPP" />
     </StateMachine.Variables>
   </StateMachine>
 </Activity>
